@@ -1,8 +1,7 @@
 import React from "react";
 import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import * as Icon from "react-bootstrap-icons";
-
+import { TiShoppingCart } from "react-icons/ti";
 
 function Header() {
   return (
@@ -38,7 +37,7 @@ function Header() {
               Login
             </Link>
             <Link to="/profile" className="nav-link">
-               <Icon.Cart4 />
+              <TiShoppingCart />
             </Link>
           </Nav>
         </Navbar.Collapse>
