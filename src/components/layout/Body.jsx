@@ -11,7 +11,7 @@ import {
 import ExampleCarouselImage from "../Example/ExampleCarouselImage";
 import { TiShoppingCart } from "react-icons/ti";
 import { useDispatch, useSelector } from "react-redux";
-import { getProductsByCategorytAction } from "../../redux/product/productAction";
+import { getProductsAction } from "../../redux/product/productAction";
 import ProductListByCategory from "../home/ProductListByCategory";
 function Body() {
   const VEG = "fresh-vegetables";
@@ -29,7 +29,7 @@ function Body() {
   const { productList } = useSelector((state) => state.productList);
 
   useEffect(() => {
-    dispatch(getProductsByCategorytAction());
+    dispatch(getProductsAction());
   }, [dispatch]);
 
   const freshVegetablesData = productList.filter(

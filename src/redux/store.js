@@ -13,6 +13,8 @@ const persistConfig = {
 export const store = configureStore({
     reducer: {
         cartList: cartReducer,
-        productList: productReducer
+        productList: productReducer,
+        selectedProduct: productReducer
+
     }
 })

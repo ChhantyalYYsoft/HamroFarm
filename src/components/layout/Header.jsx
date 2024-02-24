@@ -18,6 +18,9 @@ function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="p-6 justify-content-center">
             <NavDropdown title="Categories" id="nav-dropdown">
+              <Link to="/product" className="nav-link">
+                All
+              </Link>
               <NavDropdown.Item eventKey="4.1">
                 Fresh Vegetables
               </NavDropdown.Item>
