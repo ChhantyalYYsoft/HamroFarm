@@ -39,7 +39,7 @@ function Header() {
             <Link to="/profile" className="nav-link">
               Login
             </Link>
-            <Link to="/profile" className="nav-link">
+            <Link to="/cart" className="nav-link">
               <TiShoppingCart />
             </Link>
           </Nav>

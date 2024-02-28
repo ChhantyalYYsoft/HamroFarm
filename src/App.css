@@ -12,9 +12,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+*/
 .main {
   min-height: calc(100vh - 7rem);
-} */
+}
 .main {
   min-height: calc(100vh - 7rem);
 }
@@ -23,4 +24,8 @@
 }
 .product-body {
   margin-top: 20px;
+}
+.row-format {
+  background-color: #efefef;
+  margin-top: 5%;
 }

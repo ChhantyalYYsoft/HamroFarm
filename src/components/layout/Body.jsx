@@ -19,11 +19,11 @@ function Body() {
   const HERB = "fresh-herbs";
 
   const dispatch = useDispatch();
-  let [count, setCount] = useState(0);
+  let [quantity, setQuantity] = useState(0);
   const handleInputChange = (event) => {
     const inputQuantity = parseInt(event.target.value, 10);
-    if (!isNaN(inputQuantity) && inputQuantity >= 1) {
-      setCount(inputQuantity);
+    if (!isNaN(inputQuantity) && inputQuantity >= 0) {
+      setQuantity(inputQuantity);
     }
   };
   const { productList } = useSelector((state) => state.productList);
@@ -42,13 +42,17 @@ function Body() {
     (item) => item.categorySlug == HERB
   );
 
+  const handleOnClick = (slug) => {
+    console.log(slug + " Hello " + quantity);
+  };
+
   return (
     <>
       <Container>
         <hr />
         <h2>Fresh Vegetables:</h2>
         <hr />
-        <Row>
+        <Row className="row-format">
           {freshVegetablesData.map((veg) => {
             return (
               <Col className="md-3 mt-2 mb-2" key={veg.categorySlug}>
@@ -64,13 +68,16 @@ function Body() {
                           <input
                             className="qty"
                             type="number"
-                            value={count}
+                            value={quantity}
                             onChange={handleInputChange}
                           />
                         </label>
                       </div>
                     </Card.Text>
-                    <Button variant="primary">
+                    <Button
+                      variant="primary"
+                      onClick={() => handleOnClick(veg.slug)}
+                    >
                       Add To <TiShoppingCart />
                     </Button>
                   </Card.Body>
@@ -98,7 +105,7 @@ function Body() {
                           <input
                             className="qty"
                             type="number"
-                            value={count}
+                            value={quantity}
                             onChange={handleInputChange}
                           />
                         </label>
@@ -132,7 +139,7 @@ function Body() {
                           <input
                             className="qty"
                             type="number"
-                            value={count}
+                            value={quantity}
                             onChange={handleInputChange}
                           />
                         </label>
