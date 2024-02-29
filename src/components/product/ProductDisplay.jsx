@@ -51,7 +51,7 @@ function ProductDisplay() {
           </Breadcrumb>
         </Row>
 
-        <Row className="mt-5">
+        <Row className="mt-5 bg-light border px-3 py-3">
           <Nav justify variant="tabs" defaultActiveKey="link-1">
             <Nav.Item>
               <Nav.Link eventKey="link-1" onClick={() => handleOnclick("all")}>
@@ -84,7 +84,6 @@ function ProductDisplay() {
             </Nav.Item>
           </Nav>
         </Row>
-        <hr />
         <Row className="mt-5">
           {productList.map((product) => {
             return (
